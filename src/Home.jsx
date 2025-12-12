@@ -9,20 +9,16 @@ import CardMedia from '@mui/material/CardMedia';
 
 const slides = [
   {
-    src: new URL('./assets/slideshow-1.jpg', import.meta.url).href,
-    alt: 'Spa stones and candle',
+    src: new URL('./assets/slideshow-1.jpg', import.meta.url).href
   },
   {
     src: new URL('./assets/slideshow-2.jpg', import.meta.url).href,
-    alt: 'Massage therapy session',
   },
   {
     src: new URL('./assets/slideshow-3.jpg', import.meta.url).href,
-    alt: 'Aromatherapy essentials',
   },
   {
     src: new URL('./assets/slideshow-4.jpg', import.meta.url).href,
-    alt: 'Relaxing spa setup',
   },
 ];
 
@@ -207,6 +203,41 @@ function Home() {
             View all services
           </Button>
         </Box>
+      </Container>
+
+      <Container
+        maxWidth="lg"
+        sx={{ mt: { xs: 6, md: 8 }, pb: { xs: 6, md: 8 } }}>
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif' }}
+        >
+          ABOUT ME
+        </Typography>
+        <Typography variant="body1">
+          I’m passionate about helping clients look and feel their best through evidence-based
+          aesthetic and wellness treatments. From personalized consults to tailored treatment
+          plans, every visit is designed to be welcoming, transparent, and results-driven.
+        </Typography>
+        <Typography variant="body1" sx={{ mb: 3 }}>
+          Whether you’re exploring preventative care, rejuvenation, or restorative therapies, we’ll
+          create a plan that fits your goals and lifestyle.
+        </Typography>
+        <Button
+          variant="contained"
+          color="secondary"
+          href="/contact"
+          sx={{
+            borderRadius: '999px',
+            textTransform: 'none',
+            px: 4,
+            py: 1.2
+          }}
+        >
+          Contact Us
+        </Button>
       </Container>
     </Box>
   );
