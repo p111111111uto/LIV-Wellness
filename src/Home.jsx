@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
+import { Link as RouterLink } from 'react-router-dom';
 
 const slides = [
   {
@@ -109,7 +110,8 @@ function Home() {
           <Button
             variant="contained"
             size="large"
-            href="/bookings"
+            component={RouterLink}
+            to="/bookings"
             sx={{
               px: 4,
               py: 1.2,
@@ -173,7 +175,8 @@ function Home() {
                 <Button
                   variant="contained"
                   color="secondary"
-                  href="/bookings"
+                  component={RouterLink}
+                  to="/bookings"
                   sx={{
                     alignSelf: 'flex-start',
                     mt: 'auto',
@@ -192,7 +195,8 @@ function Home() {
           <Button
             variant="outlined"
             color="primary"
-            href="/services"
+            component={RouterLink}
+            to="/services"
             sx={{
               px: 4,
               py: 1.2,
@@ -214,10 +218,10 @@ function Home() {
           gutterBottom
           sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif' }}
         >
-          ABOUT ME
+          ABOUT US
         </Typography>
         <Typography variant="body1">
-          I’m passionate about helping clients look and feel their best through evidence-based
+          We are passionate about helping clients look and feel their best through evidence-based
           aesthetic and wellness treatments. From personalized consults to tailored treatment
           plans, every visit is designed to be welcoming, transparent, and results-driven.
         </Typography>
@@ -228,7 +232,8 @@ function Home() {
         <Button
           variant="contained"
           color="secondary"
-          href="/contact"
+          component={RouterLink}
+          to="/contact"
           sx={{
             borderRadius: '999px',
             textTransform: 'none',

@@ -10,11 +10,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from './assets/logo.PNG';
+import { Link as RouterLink } from 'react-router-dom';
 
 const pages = [
   { label: 'Services', href: '/services' },
   { label: 'Bookings', href: '/bookings' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Contact', href: '/contact' },
 ];
 
 function ResponsiveAppBar() {
@@ -34,8 +35,8 @@ function ResponsiveAppBar() {
         <Toolbar disableGutters>
           {/* DESKTOP LOGO */}
           <Box
-            component="a"
-            href="/"
+            component={RouterLink}
+            to="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -83,8 +84,8 @@ function ResponsiveAppBar() {
               {pages.map(({ label, href }) => (
                 <MenuItem
                   key={label}
-                  component="a"
-                  href={href}
+                  component={RouterLink}
+                  to={href}
                   onClick={handleCloseNavMenu}
                 >
                   <Typography sx={{ textAlign: 'center' }}>{label}</Typography>
@@ -95,8 +96,8 @@ function ResponsiveAppBar() {
 
           {/* MOBILE LOGO */}
           <Box
-            component="a"
-            href="/"
+            component={RouterLink}
+            to="/"
             sx={{
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
@@ -122,14 +123,14 @@ function ResponsiveAppBar() {
               gap: 2,
             }}
           >
-            {pages.map(({ label, href }) => (
-              <Button
-                key={label}
-                component="a"
-                href={href}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
+              {pages.map(({ label, href }) => (
+                <Button
+                  key={label}
+                  component={RouterLink}
+                  to={href}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
                   color: 'white',
                   display: 'block',
                   textTransform: 'none',
