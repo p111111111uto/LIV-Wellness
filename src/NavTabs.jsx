@@ -14,7 +14,8 @@ import logo from './assets/logo.PNG';
 const pages = [
   { label: 'Services', href: '/services' },
   { label: 'About Us', href: '/about' },
-  { label: 'Appointments', href: '/appointments' },
+  { label: 'Bookings', href: '/bookings' },
+  { label: 'Contact', href: '/contact' }
 ];
 
 function ResponsiveAppBar() {
@@ -29,7 +30,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#a86335' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#3a5a40' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* DESKTOP LOGO */}
@@ -119,6 +120,7 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               display: { xs: 'none', md: 'flex' },
               justifyContent: 'flex-end',
+              gap: 2,
             }}
           >
             {pages.map(({ label, href }) => (
@@ -127,7 +129,13 @@ function ResponsiveAppBar() {
                 component="a"
                 href={href}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{
+                  my: 2,
+                  color: 'white',
+                  display: 'block',
+                  textTransform: 'none',
+                  fontSize: '1.1rem',
+                }}
               >
                 {label}
               </Button>
