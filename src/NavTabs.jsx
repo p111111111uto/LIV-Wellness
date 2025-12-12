@@ -1,34 +1,141 @@
 import * as React from 'react';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
+import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Typography from '@mui/material/Typography';
+import Menu from '@mui/material/Menu';
+import MenuIcon from '@mui/icons-material/Menu';
+import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+import MenuItem from '@mui/material/MenuItem';
+import logo from './assets/logo.PNG';
 
-export default function ColorTabs() {
-  const [value, setValue] = React.useState('about-us');
+const pages = [
+  { label: 'Services', href: '/services' },
+  { label: 'About Us', href: '/about' },
+  { label: 'Appointments', href: '/appointments' },
+];
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+function ResponsiveAppBar() {
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
   };
 
   return (
-    <Box sx={{ flex: 1 }}>
-      <Tabs
-        value={value}
-        onChange={handleChange}
-        textColor="primary"
-        indicatorColor="primary"
-        aria-label="navigation tabs"
-        centered
-        sx={{
-          '& .MuiTab-root': { fontWeight: 700, textTransform: 'none', minHeight: 48 },
-          '& .MuiTabs-indicator': { height: 3, borderRadius: 2 },
-          minHeight: 48
-        }}
-      >
-        <Tab value="about-us" label="About Us" />
-        <Tab value="services" label="Services" />
-        <Tab value="schedule-appointment" label="Schedule Appointment" />
-      </Tabs>
-    </Box>
+    <AppBar position="static" sx={{ backgroundColor: '#a86335' }}>
+      <Container maxWidth="xl">
+        <Toolbar disableGutters>
+          {/* DESKTOP LOGO */}
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              mr: 2,
+              display: { xs: 'none', md: 'flex' },
+              alignItems: 'center',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+          >
+            <Box
+              component="img"
+              src={logo}
+              alt="LIV Wellness"
+              sx={{ height: 100, mr: 1 }}
+            />
+          </Box>
+
+          {/* MOBILE MENU ICON */}
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <IconButton
+              size="large"
+              aria-label="open navigation menu"
+              aria-controls="menu-appbar"
+              aria-haspopup="true"
+              onClick={handleOpenNavMenu}
+              color="inherit"
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: 'bottom',
+                horizontal: 'left',
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: 'top',
+                horizontal: 'left',
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+              sx={{ display: { xs: 'block', md: 'none' } }}
+            >
+              {pages.map(({ label, href }) => (
+                <MenuItem
+                  key={label}
+                  component="a"
+                  href={href}
+                  onClick={handleCloseNavMenu}
+                >
+                  <Typography sx={{ textAlign: 'center' }}>{label}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          {/* MOBILE LOGO */}
+          <Box
+            component="a"
+            href="/"
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 1,
+              alignItems: 'center',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+          >
+            <Box
+              component="img"
+              src={logo}
+              alt="LIV Wellness"
+              sx={{ height: 50, mr: 1 }}
+            />
+          </Box>
+
+          {/* DESKTOP MENU ITEMS (Aligned Right) */}
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'flex-end',
+            }}
+          >
+            {pages.map(({ label, href }) => (
+              <Button
+                key={label}
+                component="a"
+                href={href}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                {label}
+              </Button>
+            ))}
+          </Box>
+        </Toolbar>
+      </Container>
+    </AppBar>
   );
 }
+export default ResponsiveAppBar;
