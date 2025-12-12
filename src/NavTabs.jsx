@@ -30,7 +30,7 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#3a5a40' }}>
+    <AppBar position="static" sx={{ bgcolor: 'palette.primary.main' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* DESKTOP LOGO */}
@@ -114,7 +114,7 @@ function ResponsiveAppBar() {
             />
           </Box>
 
-          {/* DESKTOP MENU ITEMS (Aligned Right) */}
+          {/* DESKTOP MENU ITEMS */}
           <Box
             sx={{
               flexGrow: 1,

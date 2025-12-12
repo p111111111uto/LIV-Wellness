@@ -1,22 +1,23 @@
 import './App.css';
 import ResponsiveAppBar from './NavTabs.jsx';
+import Home from './Home.jsx';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#a86335',
+      main: '#613C20',
     },
     secondary: {
-      main: '#bf8520',
+      main: '#95825b',
     },
     background: {
-      default: '#fcf1e5',
+      default: '#fcf8ee',
     },
   },
   typography: {
-    fontFamily: 'Roboto, Arial, sans-serif',
+    fontFamily: 'Roboto Flex, Arial, sans-serif',
   },
 });
 
@@ -25,6 +26,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <ResponsiveAppBar />
+      <Home />
     </ThemeProvider>
   );
 }
