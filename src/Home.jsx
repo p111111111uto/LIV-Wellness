@@ -128,20 +128,15 @@ function Home() {
         </Container>
       </Box>
 
-      <Container maxWidth="md" sx={{ py: { xs: 4, md: 6 } }}>
-        <Typography variant="h4" component="h2" gutterBottom>
-          Our Promise
-        </Typography>
-        <Typography variant="body1" paragraph>
-          Personalized care, evidence-based treatments, and a serene environment to help you feel
-          your best. Browse our services, learn about our practitioners, and schedule the perfect
-          time to visit.
-        </Typography>
-      </Container>
-
-      <Container maxWidth="lg" sx={{ pb: { xs: 6, md: 8 } }}>
-        <Typography variant="h4" component="h2" gutterBottom>
-          Services
+      <Container maxWidth="lg"
+        sx={{ mt: { xs: 6, md: 8 }, pb: { xs: 6, md: 8 } }}>
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif', fontWeight: 700 }}
+        >
+          SERVICES
         </Typography>
         <Box
           sx={{
@@ -188,8 +183,7 @@ function Home() {
                     mt: 'auto',
                     px: 3,
                     borderRadius: '999px',
-                    textTransform: 'none',
-                    fontWeight: 600,
+                    textTransform: 'none'
                   }}
                 >
                   Book your {service.name} appointment
@@ -208,7 +202,6 @@ function Home() {
               py: 1.2,
               borderRadius: '999px',
               textTransform: 'none',
-              fontWeight: 600,
             }}
           >
             View all services
