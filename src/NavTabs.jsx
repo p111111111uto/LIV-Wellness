@@ -13,7 +13,6 @@ import logo from './assets/logo.PNG';
 
 const pages = [
   { label: 'Services', href: '/services' },
-  { label: 'About Us', href: '/about' },
   { label: 'Bookings', href: '/bookings' },
   { label: 'Contact', href: '/contact' }
 ];

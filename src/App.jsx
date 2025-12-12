@@ -1,6 +1,7 @@
 import './App.css';
 import ResponsiveAppBar from './NavTabs.jsx';
 import Home from './Home.jsx';
+import Footer from './Footer.jsx';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
@@ -27,6 +28,7 @@ function App() {
       <CssBaseline />
       <ResponsiveAppBar />
       <Home />
+      <Footer />
     </ThemeProvider>
   );
 }
