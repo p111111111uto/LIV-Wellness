@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link as RouterLink } from 'react-router-dom';
+import RotatingText from './RotatingText.jsx';
 import { servicesImageBase } from './data/servicesImageBase.js';
 
 const slides = [
@@ -23,6 +24,8 @@ const slides = [
     src: new URL('./assets/slideshow-4.jpg', import.meta.url).href,
   },
 ];
+
+const rotatingWords = ['beautifully.', 'confidently.', 'gracefully.'];
 
 const services = [
   {
@@ -80,37 +83,108 @@ function Home() {
             }}
           />
         ))}
-        <Container maxWidth="md" sx={{ position: 'relative', zIndex: 1 }}>
+        <Container
+          maxWidth="md"
+          sx={{
+            position: 'relative',
+            zIndex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minHeight: { xs: '40vh', md: '50vh' },
+          }}
+        >
+          <Box sx={{ textAlign: 'center' }}>
+            <Box
+              component="span"
+              sx={{
+                display: 'inline-flex',
+                alignItems: 'baseline',
+                gap: { xs: 0.8, md: 1.4 },
+                fontWeight: 700,
+                fontSize: { xs: '2.2rem', sm: '3.1rem', md: '4.4rem' },
+                letterSpacing: { xs: '0.02em', md: '0.05em' },
+              }}
+            >
+              <Box component="span">LIV</Box>
+              <RotatingText texts={rotatingWords} splitBy="characters" />
+            </Box>
+          </Box>
+        </Container>
+      </Box>
+
+      <Box
+        component="section"
+        sx={{
+          backgroundColor: '#f6f1e6',
+          backgroundImage:
+            'radial-gradient(circle at 20% 20%, rgba(255,255,255,0.6), transparent 45%), radial-gradient(circle at 80% 60%, rgba(255,255,255,0.5), transparent 40%)',
+          py: { xs: 6, md: 8 },
+          px: { xs: 3, md: 6 },
+        }}
+      >
+        <Container maxWidth="lg" sx={{ textAlign: 'center' }}>
           <Typography
             variant="h3"
             component="h1"
-            gutterBottom
-            sx={{ fontWeight: 700, fontSize: '4rem', fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif' }}
+            sx={{
+              fontWeight: 700,
+              letterSpacing: '0.18em',
+              textTransform: 'uppercase',
+              fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif',
+              fontSize: { xs: '1.8rem', md: '2.6rem' },
+            }}
           >
             Welcome to LIV Wellness & Aesthetics
           </Typography>
-          <Typography variant="h6" component="p" sx={{ maxWidth: 680, mb: 3, fontStyle: 'italic' }}>
-            LIV beautifully. LIV confidently. LIV gracefully.
-            <br />
-            Where subtle enhancements create powerful confidence.
-            <br />
+          <Typography
+            variant="h6"
+            component="p"
+            sx={{
+              mt: 1.5,
+              mb: 3,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'secondary.main',
+              fontWeight: 600,
+              fontSize: { xs: '0.95rem', md: '1.1rem' },
+            }}
+          >
             Beauty rooted in wellness. Wellness elevated by science
           </Typography>
+          <Typography
+            variant="body1"
+            sx={{
+              maxWidth: 960,
+              mx: 'auto',
+              fontSize: { xs: '1.05rem', md: '1.2rem' },
+              lineHeight: 1.85,
+              color: '#2f2a25',
+              mb: 4,
+            }}
+          >
+            LIV Wellness & Aesthetics is a haven of calm where science-led care meets timeless luxury. Whether you are
+            replenishing your skin, restoring balance, or elevating your glow, every visit is designed to feel soothing,
+            personal, and transformative.
+          </Typography>
           <Button
-            variant="contained"
-            size="large"
+            variant="outlined"
+            color="primary"
             component={RouterLink}
             to="/bookings"
             sx={{
-              px: 4,
-              py: 1.2,
-              borderRadius: '999px',
-              textTransform: 'none',
-              fontSize: '1.2rem',
-              bgcolor: 'secondary.main',
+              px: 4.5,
+              py: 1.4,
+              borderRadius: 0,
+              textTransform: 'uppercase',
+              letterSpacing: '0.08em',
+              fontWeight: 600,
+              borderColor: '#8a6a3f',
+              color: '#8a6a3f',
+              '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
             }}
           >
-            Book an Appointment
+            Book Online
           </Button>
         </Container>
       </Box>
