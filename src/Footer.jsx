@@ -31,7 +31,7 @@ function Footer() {
           </Link>
         </Typography>
         <Typography variant="body1" sx={{ mb: 1 }}>
-          Address: 123 Wellness Ave, Suite 200, City, ST 12345
+          Address: 8040 NW 95th Street Suite 224 Hialeah Gardens, Fl 33016
         </Typography>
         <Typography variant="body1" sx={{ mb: 1 }}>
           Email:{' '}
