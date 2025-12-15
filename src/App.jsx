@@ -5,6 +5,7 @@ import Footer from './Footer.jsx';
 import Services from './Services.jsx';
 import AboutUs from './AboutUs.jsx';
 import Contact from './Contact.jsx';
+import Bookings from './Bookings.jsx';
 import { useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -48,6 +49,8 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/bookings" element={<Bookings />} />
+        <Route path="*" element={<Home />} />
 
       </Routes>
       <Footer />
