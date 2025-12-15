@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -10,20 +10,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import RotatingText from './RotatingText.jsx';
 import { servicesImageBase } from './data/servicesImageBase.js';
 
-const slides = [
-  {
-    src: new URL('./assets/slideshow-1.jpg', import.meta.url).href
-  },
-  {
-    src: new URL('./assets/slideshow-2.jpg', import.meta.url).href,
-  },
-  {
-    src: new URL('./assets/slideshow-3.jpg', import.meta.url).href,
-  },
-  {
-    src: new URL('./assets/slideshow-4.jpg', import.meta.url).href,
-  },
-];
+const heroBackground = new URL('./assets/background-home.jpg', import.meta.url).href;
 
 const rotatingWords = ['beautifully.', 'confidently.', 'gracefully.'];
 
@@ -55,15 +42,6 @@ const services = [
 ];
 
 function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <Box component="main">
       <Box
@@ -76,25 +54,12 @@ function Home() {
           color: '#fff',
           overflow: 'hidden',
           backgroundColor: '#111',
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url(${heroBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
         }}
       >
-        {slides.map((slide, index) => (
-          <Box
-            key={slide.src}
-            role="img"
-            aria-label={slide.alt}
-            sx={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage: `linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url(${slide.src})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              transition: 'opacity 1.1s ease-in-out',
-              opacity: index === currentSlide ? 1 : 0,
-              zIndex: 0,
-            }}
-          />
-        ))}
         <Container
           maxWidth="md"
           sx={{
