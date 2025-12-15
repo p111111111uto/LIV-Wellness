@@ -20,7 +20,7 @@ function Footer() {
           variant="h5"
           component="h2"
           gutterBottom
-          sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif', fontSize: '2rem' }}
+          sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif', fontSize: '2rem' }}
         >
           CONTACT
         </Typography>
