@@ -231,15 +231,16 @@ function Home() {
           variant="contained"
           color="secondary"
           component={RouterLink}
-          to="/about-us"
+          to="/aboutus"
           sx={{
             borderRadius: '999px',
             textTransform: 'none',
             px: 4,
-            py: 1.2
+            py: 1.2,
+            mt: 3,
           }}
         >
-          About Us
+          View More
         </Button>
       </Container>
     </Box>
