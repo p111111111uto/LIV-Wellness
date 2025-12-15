@@ -32,7 +32,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        {/* You can add more routes like /bookings or /about when ready */}
+        <Route path="/about-us" element={<AboutUs />} />
+        
       </Routes>
       <Footer />
     </ThemeProvider>

@@ -225,19 +225,13 @@ function Home() {
           ABOUT US
         </Typography>
         <Typography variant="body1">
-          We are passionate about helping clients look and feel their best through evidence-based
-          aesthetic and wellness treatments. From personalized consults to tailored treatment
-          plans, every visit is designed to be welcoming, transparent, and results-driven.
-        </Typography>
-        <Typography variant="body1" sx={{ mb: 3 }}>
-          Whether you’re exploring preventative care, rejuvenation, or restorative therapies, we’ll
-          create a plan that fits your goals and lifestyle.
+          LIV Wellness & Aesthetics is a luxury wellness and aesthetic studio dedicated to delivering natural, refined results through advanced medical treatments, longevity-focused therapies, and personalized care. Our soft-nude aesthetic reflects our philosophy: beauty should feel effortless, balanced, and timeless. At LIV, we elevate your wellness, enhance your beauty, and empower you to live confidently—inside and out.
         </Typography>
         <Button
           variant="contained"
           color="secondary"
           component={RouterLink}
-          to="/contact"
+          to="/about-us"
           sx={{
             borderRadius: '999px',
             textTransform: 'none',
@@ -245,7 +239,7 @@ function Home() {
             py: 1.2
           }}
         >
-          Contact Us
+          About Us
         </Button>
       </Container>
     </Box>
