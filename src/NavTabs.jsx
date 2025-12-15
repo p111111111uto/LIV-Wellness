@@ -16,6 +16,7 @@ const pages = [
   { label: 'Services', href: '/services' },
   { label: 'Bookings', href: '/bookings' },
   { label: 'Contact', href: '/contact' },
+  { label: 'About Us', href: '/aboutus' },
 ];
 
 function ResponsiveAppBar() {

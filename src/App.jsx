@@ -3,9 +3,11 @@ import ResponsiveAppBar from './NavTabs.jsx';
 import Home from './Home.jsx';
 import Footer from './Footer.jsx';
 import Services from './Services.jsx';
+import AboutUs from './AboutUs.jsx';
+import { useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 
 const theme = createTheme({
   palette: {
@@ -24,16 +26,27 @@ const theme = createTheme({
   },
 });
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
+      <ScrollToTop />
       <ResponsiveAppBar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        
+        <Route path="/aboutus" element={<AboutUs />} />
+
       </Routes>
       <Footer />
     </ThemeProvider>
