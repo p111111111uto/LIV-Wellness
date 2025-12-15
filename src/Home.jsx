@@ -27,6 +27,18 @@ const slides = [
 
 const rotatingWords = ['beautifully.', 'confidently.', 'gracefully.'];
 
+const outlinedButtonSx = {
+  px: 4.5,
+  py: 1.4,
+  borderRadius: 0,
+  textTransform: 'uppercase',
+  letterSpacing: '0.08em',
+  fontWeight: 600,
+  borderColor: '#8a6a3f',
+  color: '#8a6a3f',
+  '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
+};
+
 const services = [
   {
     name: 'Botox',
@@ -131,7 +143,7 @@ function Home() {
               fontWeight: 700,
               letterSpacing: '0.18em',
               textTransform: 'uppercase',
-              fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif',
+              fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif',
               fontSize: { xs: '1.8rem', md: '2.6rem' },
             }}
           >
@@ -169,20 +181,9 @@ function Home() {
           </Typography>
           <Button
             variant="outlined"
-            color="primary"
             component={RouterLink}
             to="/bookings"
-            sx={{
-              px: 4.5,
-              py: 1.4,
-              borderRadius: 0,
-              textTransform: 'uppercase',
-              letterSpacing: '0.08em',
-              fontWeight: 600,
-              borderColor: '#8a6a3f',
-              color: '#8a6a3f',
-              '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
-            }}
+            sx={outlinedButtonSx}
           >
             Book Online
           </Button>
@@ -195,7 +196,7 @@ function Home() {
           variant="h4"
           component="h2"
           gutterBottom
-          sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif', fontWeight: 700 }}
+          sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif', fontWeight: 700 }}
         >
           SERVICES
         </Typography>
@@ -236,17 +237,10 @@ function Home() {
                   {service.description}
                 </Typography>
                 <Button
-                  variant="contained"
-                  color="secondary"
+                  variant="outlined"
                   component={RouterLink}
                   to="/bookings"
-                  sx={{
-                    alignSelf: 'flex-start',
-                    mt: 'auto',
-                    px: 3,
-                    borderRadius: '999px',
-                    textTransform: 'none'
-                  }}
+                  sx={{ ...outlinedButtonSx, alignSelf: 'flex-start', mt: 'auto' }}
                 >
                   Book your {service.name} appointment
                 </Button>
@@ -257,15 +251,9 @@ function Home() {
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
           <Button
             variant="outlined"
-            color="primary"
             component={RouterLink}
             to="/services"
-            sx={{
-              px: 4,
-              py: 1.2,
-              borderRadius: '999px',
-              textTransform: 'none',
-            }}
+            sx={outlinedButtonSx}
           >
             View all services
           </Button>
@@ -279,7 +267,7 @@ function Home() {
           variant="h4"
           component="h2"
           gutterBottom
-          sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif' }}
+          sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif' }}
         >
           ABOUT US
         </Typography>
@@ -287,17 +275,10 @@ function Home() {
           LIV Wellness & Aesthetics is a luxury wellness and aesthetic studio dedicated to delivering natural, refined results through advanced medical treatments, longevity-focused therapies, and personalized care. Our soft-nude aesthetic reflects our philosophy: beauty should feel effortless, balanced, and timeless. At LIV, we elevate your wellness, enhance your beauty, and empower you to live confidently—inside and out.
         </Typography>
         <Button
-          variant="contained"
-          color="secondary"
+          variant="outlined"
           component={RouterLink}
           to="/aboutus"
-          sx={{
-            borderRadius: '999px',
-            textTransform: 'none',
-            px: 4,
-            py: 1.2,
-            mt: 3,
-          }}
+          sx={{ ...outlinedButtonSx, mt: 3 }}
         >
           View More
         </Button>

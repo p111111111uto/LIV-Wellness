@@ -23,7 +23,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: 'Roboto Flex, Arial, sans-serif',
+    fontFamily: 'Montserrat, Arial, sans-serif',
   },
 });
 

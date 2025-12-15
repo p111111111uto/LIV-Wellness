@@ -8,6 +8,18 @@ import Button from '@mui/material/Button';
 import { Link as RouterLink } from 'react-router-dom';
 import { servicesImageBase } from './data/servicesImageBase.js';
 
+const outlinedButtonSx = {
+  px: 4.5,
+  py: 1.4,
+  borderRadius: 0,
+  textTransform: 'uppercase',
+  letterSpacing: '0.08em',
+  fontWeight: 600,
+  borderColor: '#8a6a3f',
+  color: '#8a6a3f',
+  '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
+};
+
 const services = [
   {
     name: 'Botox',
@@ -53,7 +65,7 @@ function Services() {
           variant="h3"
           component="h1"
           gutterBottom
-          sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif' }}
+          sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif' }}
         >
           Our Services
         </Typography>
@@ -93,7 +105,7 @@ function Services() {
                 }}
               />
               <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1.25 }}>
-                <Typography variant="h5" component="h2" sx={{ fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif' }}>
+                <Typography variant="h5" component="h2" sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif' }}>
                   {service.name}
                 </Typography>
                 <Typography variant="body1" color="text.primary">
@@ -107,17 +119,10 @@ function Services() {
                   ))}
                 </Box>
                 <Button
-                  variant="contained"
-                  color="secondary"
+                  variant="outlined"
                   component={RouterLink}
                   to="/bookings"
-                  sx={{
-                    alignSelf: 'flex-start',
-                    mt: 'auto',
-                    px: 3,
-                    borderRadius: '999px',
-                    textTransform: 'none'
-                  }}
+                  sx={{ ...outlinedButtonSx, alignSelf: 'flex-start', mt: 'auto' }}
                 >
                   Book your {service.name} appointment
                 </Button>

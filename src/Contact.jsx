@@ -28,7 +28,7 @@ function Contact() {
             sx={{
               fontWeight: 700,
               mb: 2,
-              fontFamily: '"Rosehot", "Roboto Flex", Arial, sans-serif',
+              fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif',
             }}
           >
             Contact Us
