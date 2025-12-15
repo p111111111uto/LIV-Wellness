@@ -7,6 +7,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import { Link as RouterLink } from 'react-router-dom';
+import { servicesImageBase } from './data/servicesImageBase.js';
 
 const slides = [
   {
@@ -28,29 +29,13 @@ const services = [
     name: 'Botox',
     description:
       'Smooth fine lines and soften expression lines with precise, targeted treatments for a refreshed look.',
-    image:
-      'https://images.unsplash.com/photo-1508387024700-9fe5c0b37ccd?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'Dermal Fillers',
-    description:
-      'Restore volume and enhance natural contours with hyaluronic-acid fillers tailored to your features.',
-    image:
-      'https://images.unsplash.com/photo-1508387024700-9fe5c0b37ccd?auto=format&fit=crop&w=800&q=80',
+    image: servicesImageBase[0].src,
   },
   {
     name: 'Skin Rejuvenation',
     description:
       'Even tone and boost radiance with advanced resurfacing and collagen-stimulating treatments.',
-    image:
-      'https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?auto=format&fit=crop&w=800&q=80',
-  },
-  {
-    name: 'IV Therapy',
-    description:
-      'Hydrate, energize, and replenish essential nutrients with custom IV blends delivered in-spa.',
-    image:
-      'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80',
+    image: servicesImageBase[2].src,
   },
 ];
 
