@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import { Link as RouterLink } from 'react-router-dom';
+import { servicesImageBase } from './data/servicesImageBase.js';
 
 const services = [
   {
@@ -13,32 +14,28 @@ const services = [
     description:
       'Soften expression lines, smooth fine wrinkles, and refresh your look with precise neuromodulator treatments tailored to your features.',
     benefits: ['Targets frown lines, crow’s feet, forehead lines', 'Minimal downtime, natural finish', 'Personalized dosing for balanced results'],
-    image:
-      'https://images.unsplash.com/photo-1508387024700-9fe5c0b37ccd?auto=format&fit=crop&w=900&q=80',
+    image: servicesImageBase[0].src,
   },
   {
     name: 'Dermal Fillers',
     description:
       'Restore volume, refine contours, and enhance definition with hyaluronic-acid fillers customized for your unique profile.',
     benefits: ['Lips, cheeks, chin, jawline balancing', 'Hydrating HA formulas for a soft feel', 'Immediate results with subtle shaping'],
-    image:
-      'https://images.unsplash.com/photo-1508387024700-9fe5c0b37ccd?auto=format&fit=crop&w=900&q=80',
+    image: servicesImageBase[1].src,
   },
   {
     name: 'Skin Rejuvenation',
     description:
       'Boost luminosity and even tone with resurfacing and collagen-stimulating treatments designed to revive your complexion.',
     benefits: ['Supports smoother texture and smaller pores', 'Targets sun damage and uneven tone', 'Plans tailored to skin type and goals'],
-    image:
-      'https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?auto=format&fit=crop&w=900&q=80',
+    image: servicesImageBase[2].src,
   },
   {
     name: 'IV Therapy',
     description:
       'Hydrate, replenish nutrients, and support energy with custom IV drips delivered in a calm, comfortable setting.',
     benefits: ['Supports recovery and immune health', 'Custom blends based on your needs', 'Relaxing, efficient sessions'],
-    image:
-      'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=900&q=80',
+    image: servicesImageBase[3].src,
   },
 ];
 
