@@ -54,12 +54,34 @@ function ResponsiveAppBar() {
             />
           </Box>
 
+          {/* MOBILE LOGO */}
+          <Box
+            component={RouterLink}
+            to="/"
+            sx={{
+              display: { xs: 'flex', md: 'none' },
+              flexGrow: 0,
+              alignItems: 'center',
+              justifyContent: 'flex-start',
+              textDecoration: 'none',
+              color: 'inherit',
+            }}
+          >
+            <Box
+              component="img"
+              src={logo}
+              alt="LIV Wellness"
+              sx={{ height: 90 }}
+            />
+          </Box>
+
           {/* MOBILE MENU ICON */}
           <Box
             sx={{
-              flexGrow: 0,
+              flexGrow: 1,
               display: { xs: 'flex', md: 'none' },
               alignItems: 'center',
+              justifyContent: 'flex-end',
             }}
           >
             <IconButton
@@ -99,27 +121,6 @@ function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
-
-          {/* MOBILE LOGO */}
-          <Box
-            component={RouterLink}
-            to="/"
-            sx={{
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              alignItems: 'center',
-              justifyContent: 'center',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-          >
-            <Box
-              component="img"
-              src={logo}
-              alt="LIV Wellness"
-              sx={{ height: 90 }}
-            />
           </Box>
 
           {/* DESKTOP MENU ITEMS */}
