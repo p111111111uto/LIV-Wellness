@@ -55,7 +55,13 @@ function ResponsiveAppBar() {
           </Box>
 
           {/* MOBILE MENU ICON */}
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box
+            sx={{
+              flexGrow: 0,
+              display: { xs: 'flex', md: 'none' },
+              alignItems: 'center',
+            }}
+          >
             <IconButton
               size="large"
               aria-label="open navigation menu"
@@ -103,6 +109,7 @@ function ResponsiveAppBar() {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               alignItems: 'center',
+              justifyContent: 'center',
               textDecoration: 'none',
               color: 'inherit',
             }}
@@ -111,7 +118,7 @@ function ResponsiveAppBar() {
               component="img"
               src={logo}
               alt="LIV Wellness"
-              sx={{ height: 50, mr: 1 }}
+              sx={{ height: 90 }}
             />
           </Box>
 
