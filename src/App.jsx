@@ -8,11 +8,15 @@ import Contact from './Contact.jsx';
 import Bookings from './Bookings.jsx';
 import CookieConsent from './CookieConsent.jsx';
 import PrivacyNotice from './PrivacyNotice.jsx';
+import AccessibilityWidget from './AccessibilityWidget.jsx';
 import { LanguageProvider } from './LanguageContext.jsx';
+import { AccessibilityProvider } from './AccessibilityContext.jsx';
 import { useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Routes, Route, useLocation } from 'react-router-dom';
+import { MotionConfig } from 'motion/react';
+import { useAccessibility } from './AccessibilityContext.jsx';
 
 const theme = createTheme({
   palette: {
@@ -41,9 +45,11 @@ function ScrollToTop() {
   return null;
 }
 
-function App() {
+function AppContent() {
+  const { settings } = useAccessibility();
+
   return (
-    <LanguageProvider>
+    <MotionConfig reducedMotion={settings.pauseAnimations ? 'always' : 'never'}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <ScrollToTop />
@@ -59,7 +65,18 @@ function App() {
         </Routes>
         <Footer />
         <CookieConsent />
+        <AccessibilityWidget />
       </ThemeProvider>
+    </MotionConfig>
+  );
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AccessibilityProvider>
+        <AppContent />
+      </AccessibilityProvider>
     </LanguageProvider>
   );
 }

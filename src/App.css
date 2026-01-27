@@ -1,0 +1,65 @@
+/* Accessibility: Font scaling */
+:root {
+  --a11y-font-scale: 1;
+}
+
+html {
+  font-size: calc(16px * var(--a11y-font-scale));
+}
+
+/* Accessibility: High contrast */
+body.a11y-high-contrast {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+body.a11y-high-contrast * {
+  background-color: inherit;
+  color: inherit;
+  border-color: #fff !important;
+}
+
+body.a11y-high-contrast a,
+body.a11y-high-contrast button {
+  color: #ffff00 !important;
+}
+
+body.a11y-high-contrast img {
+  filter: contrast(1.2);
+}
+
+/* Accessibility: Text spacing */
+body.a11y-text-spacing {
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+}
+
+body.a11y-text-spacing * {
+  line-height: 1.8 !important;
+  letter-spacing: 0.12em !important;
+  word-spacing: 0.16em !important;
+}
+
+/* Accessibility: Pause animations */
+body.a11y-pause-animations *,
+body.a11y-pause-animations *::before,
+body.a11y-pause-animations *::after {
+  animation-duration: 0s !important;
+  animation-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+}
+
+/* Accessibility: Dyslexia-friendly font */
+@import url('https://fonts.cdnfonts.com/css/opendyslexic');
+
+body.a11y-dyslexia-font,
+body.a11y-dyslexia-font * {
+  font-family: 'OpenDyslexic', sans-serif !important;
+}
+
+/* Accessibility: Large cursor */
+body.a11y-large-cursor,
+body.a11y-large-cursor * {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cpath d='M4 4l16 40l6-16l16-6z' fill='black' stroke='white' stroke-width='2'/%3E%3C/svg%3E") 4 4, auto !important;
+}
