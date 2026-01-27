@@ -6,6 +6,7 @@ import Services from './Services.jsx';
 import AboutUs from './AboutUs.jsx';
 import Contact from './Contact.jsx';
 import Bookings from './Bookings.jsx';
+import CookieConsent from './CookieConsent.jsx';
 import { useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -54,6 +55,7 @@ function App() {
 
       </Routes>
       <Footer />
+      <CookieConsent />
     </ThemeProvider>
   );
 }
