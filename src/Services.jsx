@@ -7,6 +7,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import { Link as RouterLink } from 'react-router-dom';
 import { servicesImageBase } from './data/servicesImageBase.js';
+import { useLanguage } from './LanguageContext';
 
 const outlinedButtonSx = {
   px: 4.5,
@@ -20,38 +21,14 @@ const outlinedButtonSx = {
   '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
 };
 
-const services = [
-  {
-    name: 'Botox',
-    description:
-      'Soften expression lines, smooth fine wrinkles, and refresh your look with precise neuromodulator treatments tailored to your features.',
-    benefits: ['Targets frown lines, crow’s feet, forehead lines', 'Minimal downtime, natural finish', 'Personalized dosing for balanced results'],
-    image: servicesImageBase[0].src,
-  },
-  {
-    name: 'Dermal Fillers',
-    description:
-      'Restore volume, refine contours, and enhance definition with hyaluronic-acid fillers customized for your unique profile.',
-    benefits: ['Lips, cheeks, chin, jawline balancing', 'Hydrating HA formulas for a soft feel', 'Immediate results with subtle shaping'],
-    image: servicesImageBase[1].src,
-  },
-  {
-    name: 'Skin Rejuvenation',
-    description:
-      'Boost luminosity and even tone with resurfacing and collagen-stimulating treatments designed to revive your complexion.',
-    benefits: ['Supports smoother texture and smaller pores', 'Targets sun damage and uneven tone', 'Plans tailored to skin type and goals'],
-    image: servicesImageBase[2].src,
-  },
-  {
-    name: 'IV Therapy',
-    description:
-      'Hydrate, replenish nutrients, and support energy with custom IV drips delivered in a calm, comfortable setting.',
-    benefits: ['Supports recovery and immune health', 'Custom blends based on your needs', 'Relaxing, efficient sessions'],
-    image: servicesImageBase[3].src,
-  },
-];
-
 function Services() {
+  const { t } = useLanguage();
+
+  const services = t.services.items.map((item, i) => ({
+    ...item,
+    image: servicesImageBase[i].src,
+  }));
+
   return (
     <Box component="main" sx={{ backgroundColor: 'background.default' }}>
       <Box
@@ -67,11 +44,10 @@ function Services() {
           gutterBottom
           sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif' }}
         >
-          Our Services
+          {t.services.pageTitle}
         </Typography>
         <Typography variant="h6" component="p" sx={{ maxWidth: 760, mx: 'auto', color: 'text.secondary' }}>
-          Personalized aesthetic and wellness treatments designed to help you look refreshed, feel
-          revitalized, and reach your goals with confidence.
+          {t.services.pageSubtitle}
         </Typography>
       </Box>
 
@@ -124,7 +100,7 @@ function Services() {
                   to="/bookings"
                   sx={{ ...outlinedButtonSx, alignSelf: 'flex-start', mt: 'auto' }}
                 >
-                  Book your {service.name} appointment
+                  {t.services.bookYour} {service.name} {t.services.appointment}
                 </Button>
               </CardContent>
             </Card>

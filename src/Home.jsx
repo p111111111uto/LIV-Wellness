@@ -9,10 +9,9 @@ import CardMedia from '@mui/material/CardMedia';
 import { Link as RouterLink } from 'react-router-dom';
 import RotatingText from './RotatingText.jsx';
 import { servicesImageBase } from './data/servicesImageBase.js';
+import { useLanguage } from './LanguageContext';
 
 const heroBackground = new URL('./assets/background-home.jpg', import.meta.url).href;
-
-const rotatingWords = ['beautifully.', 'confidently.', 'gracefully.'];
 
 const outlinedButtonSx = {
   px: 4.5,
@@ -26,22 +25,16 @@ const outlinedButtonSx = {
   '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
 };
 
-const services = [
-  {
-    name: 'Botox',
-    description:
-      'Smooth fine lines and soften expression lines with precise, targeted treatments for a refreshed look.',
-    image: servicesImageBase[0].src,
-  },
-  {
-    name: 'Skin Rejuvenation',
-    description:
-      'Even tone and boost radiance with advanced resurfacing and collagen-stimulating treatments.',
-    image: servicesImageBase[2].src,
-  },
-];
+const serviceImages = [servicesImageBase[0].src, servicesImageBase[2].src];
 
 function Home() {
+  const { t } = useLanguage();
+
+  const services = t.home.featuredServices.map((s, i) => ({
+    ...s,
+    image: serviceImages[i],
+  }));
+
   return (
     <Box component="main">
       <Box
@@ -84,7 +77,7 @@ function Home() {
               }}
             >
               <Box component="span">LIV</Box>
-              <RotatingText texts={rotatingWords} splitBy="characters" />
+              <RotatingText texts={t.home.rotatingWords} splitBy="characters" />
             </Box>
           </Box>
         </Container>
@@ -112,7 +105,7 @@ function Home() {
               fontSize: { xs: '1.8rem', md: '2.6rem' },
             }}
           >
-            Welcome to LIV Wellness & Aesthetics
+            {t.home.welcomeTitle}
           </Typography>
           <Typography
             variant="h6"
@@ -127,7 +120,7 @@ function Home() {
               fontSize: { xs: '0.95rem', md: '1.1rem' },
             }}
           >
-            Beauty rooted in wellness. Wellness elevated by science
+            {t.home.welcomeSubtitle}
           </Typography>
           <Typography
             variant="body1"
@@ -140,9 +133,7 @@ function Home() {
               mb: 4,
             }}
           >
-            LIV Wellness & Aesthetics is a haven of calm where science-led care meets timeless luxury. Whether you are
-            replenishing your skin, restoring balance, or elevating your glow, every visit is designed to feel soothing,
-            personal, and transformative.
+            {t.home.welcomeBody}
           </Typography>
           <Button
             variant="outlined"
@@ -150,7 +141,7 @@ function Home() {
             to="/bookings"
             sx={outlinedButtonSx}
           >
-            Book Online
+            {t.home.bookOnline}
           </Button>
         </Container>
       </Box>
@@ -163,7 +154,7 @@ function Home() {
           gutterBottom
           sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif', fontWeight: 700 }}
         >
-          SERVICES
+          {t.home.servicesHeading}
         </Typography>
         <Box
           sx={{
@@ -207,7 +198,7 @@ function Home() {
                   to="/bookings"
                   sx={{ ...outlinedButtonSx, alignSelf: 'flex-start', mt: 'auto' }}
                 >
-                  Book your {service.name} appointment
+                  {t.home.bookYour} {service.name} {t.home.appointment}
                 </Button>
               </CardContent>
             </Card>
@@ -220,7 +211,7 @@ function Home() {
             to="/services"
             sx={outlinedButtonSx}
           >
-            View all services
+            {t.home.viewAllServices}
           </Button>
         </Box>
       </Container>
@@ -234,10 +225,10 @@ function Home() {
           gutterBottom
           sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif' }}
         >
-          ABOUT US
+          {t.home.aboutUsHeading}
         </Typography>
         <Typography variant="body1">
-          LIV Wellness & Aesthetics is a luxury wellness and aesthetic studio dedicated to delivering natural, refined results through advanced medical treatments, longevity-focused therapies, and personalized care. Our soft-nude aesthetic reflects our philosophy: beauty should feel effortless, balanced, and timeless. At LIV, we elevate your wellness, enhance your beauty, and empower you to live confidently—inside and out.
+          {t.home.aboutUsBody}
         </Typography>
         <Button
           variant="outlined"
@@ -245,7 +236,7 @@ function Home() {
           to="/aboutus"
           sx={{ ...outlinedButtonSx, mt: 3 }}
         >
-          View More
+          {t.home.viewMore}
         </Button>
       </Container>
     </Box>

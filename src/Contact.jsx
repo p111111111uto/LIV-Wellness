@@ -5,6 +5,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import { useLanguage } from './LanguageContext';
 
 const address = '8040 NW 95th Street Suite 224 Hialeah Gardens, FL 33016';
 const phone = '(555) 123-4567';
@@ -12,6 +13,8 @@ const email = 'hello@livwellness.com';
 const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
 function Contact() {
+  const { t } = useLanguage();
+
   return (
     <Box component="main" sx={{ backgroundColor: '#fcf8ee', minHeight: '100vh' }}>
       <Box
@@ -31,11 +34,10 @@ function Contact() {
               fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif',
             }}
           >
-            Contact Us
+            {t.contact.pageTitle}
           </Typography>
           <Typography variant="h6" component="p" sx={{ maxWidth: 760, lineHeight: 1.6 }}>
-            Visit our studio or reach out to plan your next appointment. We love creating calm,
-            elevated experiences tailored to you.
+            {t.contact.pageSubtitle}
           </Typography>
         </Container>
       </Box>
@@ -46,7 +48,7 @@ function Contact() {
             <Stack spacing={2.75}>
               <Box>
                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
-                  Visit Us
+                  {t.contact.visitUs}
                 </Typography>
                 <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
                   {address}
@@ -55,26 +57,26 @@ function Contact() {
 
               <Box>
                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
-                  Hours
+                  {t.contact.hours}
                 </Typography>
                 <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
-                  Mon–Fri: 9am–6pm
+                  {t.contact.hoursValue[0]}
                   <br />
-                  Sat: 10am–2pm
+                  {t.contact.hoursValue[1]}
                 </Typography>
               </Box>
 
               <Box>
                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
-                  Call or Email
+                  {t.contact.callOrEmail}
                 </Typography>
                 <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
-                  Phone:{' '}
+                  {t.contact.phone}:{' '}
                   <Link href="tel:5551234567" underline="none" sx={{ color: 'inherit' }}>
                     {phone}
                   </Link>
                   <br />
-                  Email:{' '}
+                  {t.contact.email}:{' '}
                   <Link href={`mailto:${email}`} underline="none" sx={{ color: 'inherit' }}>
                     {email}
                   </Link>
