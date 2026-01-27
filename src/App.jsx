@@ -7,6 +7,8 @@ import AboutUs from './AboutUs.jsx';
 import Contact from './Contact.jsx';
 import Bookings from './Bookings.jsx';
 import CookieConsent from './CookieConsent.jsx';
+import PrivacyNotice from './PrivacyNotice.jsx';
+import { LanguageProvider } from './LanguageContext.jsx';
 import { useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -41,22 +43,24 @@ function ScrollToTop() {
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <ScrollToTop />
-      <ResponsiveAppBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/bookings" element={<Bookings />} />
-        <Route path="*" element={<Home />} />
-
-      </Routes>
-      <Footer />
-      <CookieConsent />
-    </ThemeProvider>
+    <LanguageProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <ScrollToTop />
+        <ResponsiveAppBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/bookings" element={<Bookings />} />
+          <Route path="/privacy" element={<PrivacyNotice />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+        <Footer />
+        <CookieConsent />
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

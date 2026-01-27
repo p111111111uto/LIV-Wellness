@@ -2,9 +2,12 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
+import { Link as RouterLink } from 'react-router-dom';
 import logo from './assets/logo.png';
+import { useLanguage } from './LanguageContext';
 
 function Footer() {
+  const { language } = useLanguage();
   return (
     <Box
       component="footer"
@@ -51,6 +54,14 @@ function Footer() {
               </Link>
             </Typography>
             <Typography variant="body1">Hours: Mon–Fri 9am–6pm, Sat 10am–2pm</Typography>
+            <Link
+              component={RouterLink}
+              to="/privacy"
+              underline="hover"
+              sx={{ color: 'inherit', mt: 2, display: 'inline-block' }}
+            >
+              {language === 'en' ? 'Privacy Notice' : 'Aviso de Privacidad'}
+            </Link>
           </Box>
 
           <Box

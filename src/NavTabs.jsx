@@ -11,6 +11,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from './assets/logo.png';
 import { Link as RouterLink } from 'react-router-dom';
+import { useLanguage } from './LanguageContext';
 
 const pages = [
   { label: 'Services', href: '/services' },
@@ -21,6 +22,7 @@ const pages = [
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const { language, setLanguage } = useLanguage();
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -75,15 +77,30 @@ function ResponsiveAppBar() {
             />
           </Box>
 
-          {/* MOBILE MENU ICON */}
+          {/* MOBILE LANGUAGE TOGGLE + MENU ICON */}
           <Box
             sx={{
               flexGrow: 1,
               display: { xs: 'flex', md: 'none' },
               alignItems: 'center',
               justifyContent: 'flex-end',
+              gap: 0.5,
             }}
           >
+            <Button
+              size="small"
+              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+              sx={{
+                color: 'white',
+                minWidth: 'auto',
+                fontSize: '0.8rem',
+                textTransform: 'none',
+                border: '1px solid rgba(255,255,255,0.4)',
+                px: 1,
+              }}
+            >
+              {language === 'en' ? 'ES' : 'EN'}
+            </Button>
             <IconButton
               size="large"
               aria-label="open navigation menu"
@@ -129,6 +146,7 @@ function ResponsiveAppBar() {
               flexGrow: 1,
               display: { xs: 'none', md: 'flex' },
               justifyContent: 'flex-end',
+              alignItems: 'center',
               gap: 2,
             }}
           >
@@ -149,6 +167,21 @@ function ResponsiveAppBar() {
                 {label}
               </Button>
             ))}
+            <Button
+              size="small"
+              onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+              sx={{
+                color: 'white',
+                minWidth: 'auto',
+                textTransform: 'none',
+                fontSize: '0.95rem',
+                border: '1px solid rgba(255,255,255,0.4)',
+                px: 1.5,
+                ml: 1,
+              }}
+            >
+              {language === 'en' ? 'ES' : 'EN'}
+            </Button>
           </Box>
         </Toolbar>
       </Container>
