@@ -175,6 +175,19 @@ const translations = {
       accept: 'Accept',
       decline: 'Decline',
     },
+
+    // Accessibility
+    accessibility: {
+      title: 'Accessibility',
+      close: 'Close',
+      fontSize: 'Font Size',
+      highContrast: 'High Contrast',
+      textSpacing: 'Text Spacing',
+      pauseAnimations: 'Pause Animations',
+      dyslexiaFont: 'Dyslexia-Friendly Font',
+      largeCursor: 'Large Cursor',
+      resetAll: 'Reset All',
+    },
   },
 
   es: {
@@ -352,6 +365,19 @@ const translations = {
       message: 'Este sitio utiliza cookies para mejorar su experiencia.',
       accept: 'Aceptar',
       decline: 'Rechazar',
+    },
+
+    // Accessibility
+    accessibility: {
+      title: 'Accesibilidad',
+      close: 'Cerrar',
+      fontSize: 'Tamaño de fuente',
+      highContrast: 'Alto contraste',
+      textSpacing: 'Espaciado de texto',
+      pauseAnimations: 'Pausar animaciones',
+      dyslexiaFont: 'Fuente para dislexia',
+      largeCursor: 'Cursor grande',
+      resetAll: 'Restablecer todo',
     },
   },
 };
