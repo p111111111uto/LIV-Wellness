@@ -13,16 +13,16 @@ import logo from './assets/logo.png';
 import { Link as RouterLink } from 'react-router-dom';
 import { useLanguage } from './LanguageContext';
 
-const pages = [
-  { label: 'Services', href: '/services' },
-  { label: 'Bookings', href: '/bookings' },
-  { label: 'Contact', href: '/contact' },
-  { label: 'About Us', href: '/aboutus' },
-];
-
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const { language, setLanguage } = useLanguage();
+  const { language, setLanguage, t } = useLanguage();
+
+  const pages = [
+    { label: t.nav.services, href: '/services' },
+    { label: t.nav.bookings, href: '/bookings' },
+    { label: t.nav.contact, href: '/contact' },
+    { label: t.nav.aboutUs, href: '/aboutus' },
+  ];
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -129,7 +129,7 @@ function ResponsiveAppBar() {
             >
               {pages.map(({ label, href }) => (
                 <MenuItem
-                  key={label}
+                  key={href}
                   component={RouterLink}
                   to={href}
                   onClick={handleCloseNavMenu}
@@ -152,7 +152,7 @@ function ResponsiveAppBar() {
           >
               {pages.map(({ label, href }) => (
                 <Button
-                  key={label}
+                  key={href}
                   component={RouterLink}
                   to={href}
                   onClick={handleCloseNavMenu}

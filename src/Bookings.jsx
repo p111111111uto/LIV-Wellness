@@ -4,8 +4,11 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Link as RouterLink } from 'react-router-dom';
+import { useLanguage } from './LanguageContext';
 
 function Bookings() {
+  const { t } = useLanguage();
+
   return (
     <Box component="main" sx={{ backgroundColor: 'background.default', minHeight: '100vh' }}>
       <Container
@@ -21,14 +24,13 @@ function Bookings() {
           gutterBottom
           sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif' }}
         >
-          Book Your Visit
+          {t.bookings.pageTitle}
         </Typography>
         <Typography
           variant="body1"
           sx={{ maxWidth: 720, mx: 'auto', mb: 4, fontSize: { xs: '1.05rem', md: '1.15rem' }, lineHeight: 1.7 }}
         >
-          We’re excited to craft a personalized experience for you. Choose a service to start, or contact our team if you
-          need guidance on the best treatment plan.
+          {t.bookings.pageBody}
         </Typography>
         <Button
           variant="contained"
@@ -37,7 +39,7 @@ function Bookings() {
           to="/contact"
           sx={{ px: 4, py: 1.2, borderRadius: '999px', textTransform: 'none', fontSize: '1.05rem' }}
         >
-          Contact Our Team
+          {t.bookings.contactTeam}
         </Button>
       </Container>
     </Box>

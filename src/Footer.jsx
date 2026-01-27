@@ -7,7 +7,7 @@ import logo from './assets/logo.png';
 import { useLanguage } from './LanguageContext';
 
 function Footer() {
-  const { language } = useLanguage();
+  const { t } = useLanguage();
   return (
     <Box
       component="footer"
@@ -36,31 +36,31 @@ function Footer() {
               gutterBottom
               sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif', fontSize: '2rem' }}
             >
-              CONTACT
+              {t.footer.contact}
             </Typography>
             <Typography variant="body1" sx={{ mb: 1 }}>
-              Phone:{' '}
+              {t.footer.phone}:{' '}
               <Link href="tel:5551234567" underline="none" sx={{ color: 'inherit' }}>
                 (555) 123-4567
               </Link>
             </Typography>
             <Typography variant="body1" sx={{ mb: 1 }}>
-              Address: 8040 NW 95th Street Suite 224 Hialeah Gardens, FL 33016
+              {t.footer.address}: 8040 NW 95th Street Suite 224 Hialeah Gardens, FL 33016
             </Typography>
             <Typography variant="body1" sx={{ mb: 1 }}>
-              Email:{' '}
+              {t.footer.email}:{' '}
               <Link href="mailto:hello@livwellness.com" underline="none" sx={{ color: 'inherit' }}>
                 hello@livwellness.com
               </Link>
             </Typography>
-            <Typography variant="body1">Hours: Mon–Fri 9am–6pm, Sat 10am–2pm</Typography>
+            <Typography variant="body1">{t.footer.hours}</Typography>
             <Link
               component={RouterLink}
               to="/privacy"
               underline="hover"
               sx={{ color: 'inherit', mt: 2, display: 'inline-block' }}
             >
-              {language === 'en' ? 'Privacy Notice' : 'Aviso de Privacidad'}
+              {t.footer.privacyNotice}
             </Link>
           </Box>
 
@@ -82,7 +82,7 @@ function Footer() {
           </Box>
         </Box>
         <Typography variant="body2" align="center" sx={{ mt: 4, color: 'rgba(255,255,255,0.8)' }}>
-          © {new Date().getFullYear()} LIV Wellness & Aesthetics. All rights reserved.
+          © {new Date().getFullYear()} {t.footer.copyright}
         </Typography>
       </Container>
     </Box>

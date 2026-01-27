@@ -3,9 +3,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { motion, AnimatePresence } from 'motion/react';
+import { useLanguage } from './LanguageContext';
 
 export default function CookieConsent() {
   const [visible, setVisible] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (!localStorage.getItem('cookieConsent')) {
@@ -48,7 +50,7 @@ export default function CookieConsent() {
             }}
           >
             <Typography variant="body2" sx={{ textAlign: 'center' }}>
-              This site uses cookies to enhance your experience.
+              {t.cookie.message}
             </Typography>
             <Box sx={{ display: 'flex', gap: 1 }}>
               <Button
@@ -61,7 +63,7 @@ export default function CookieConsent() {
                   '&:hover': { bgcolor: '#e0e0e0' },
                 }}
               >
-                Accept
+                {t.cookie.accept}
               </Button>
               <Button
                 variant="outlined"
@@ -73,7 +75,7 @@ export default function CookieConsent() {
                   '&:hover': { borderColor: '#e0e0e0', bgcolor: 'rgba(255,255,255,0.1)' },
                 }}
               >
-                Decline
+                {t.cookie.decline}
               </Button>
             </Box>
           </Box>
