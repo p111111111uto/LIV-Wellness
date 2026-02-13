@@ -19,7 +19,6 @@ function ResponsiveAppBar() {
 
   const pages = [
     { label: t.nav.services, href: '/services' },
-    { label: t.nav.bookings, href: '/bookings' },
     { label: t.nav.contact, href: '/contact' },
     { label: t.nav.aboutUs, href: '/aboutus' },
   ];
