@@ -13,7 +13,7 @@ import { AccessibilityProvider } from './AccessibilityContext.jsx';
 import { useEffect } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { MotionConfig } from 'motion/react';
 import { useAccessibility } from './AccessibilityContext.jsx';
 
@@ -56,7 +56,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
-          <Route path="/bookings" element={<Services />} />
+          <Route path="/bookings" element={<Navigate to="/services" replace />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy" element={<PrivacyNotice />} />
