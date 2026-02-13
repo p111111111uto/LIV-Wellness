@@ -26,14 +26,14 @@ const translations = {
       appointment: 'appointment',
       featuredServices: [
         {
-          name: 'Botox',
+          name: 'Lumenis Trilift - Rejuvenation package /5 sessions',
           description:
-            'Smooth fine lines and soften expression lines with precise, targeted treatments for a refreshed look.',
+            'TriPollar radiofrequency, and RF microneedling to tone facial muscles, lift skin, and enhance texture. Designed for facial rejuvenation, it tackles aging by targeting muscle structure, dermal collagen, and the epidermal layer. Results: Provides a "non-surgical facelift" effect, with reported 30% reduction in wrinkles, 80% increase in smoothness, and tripled Hyaluronic Acid production.Effective for sagging skin and loss of volume, focuses on cheeks, jowls, and under-eye areas to restore youthful, toned muscle structure.',
         },
         {
-          name: 'Skin Rejuvenation',
+          name: 'Neurotoxin Injections/Botox 3 areas (forehead, glabella and crows feet)',
           description:
-            'Even tone and boost radiance with advanced resurfacing and collagen-stimulating treatments.',
+            'Neurotoxin injections, such as Botox, are designed to block nerve signals that initiate muscle contractions, promoting muscle relaxation. This treatment effectively reduces the visibility of fine lines and wrinkles, providing a smoother, more youthful appearance. Patients often seek these injections to enhance their overall facial aesthetics and boost self-confidence.',
         },
       ],
     },
@@ -47,45 +47,109 @@ const translations = {
       appointment: 'appointment',
       items: [
         {
-          name: 'Botox',
+          name: 'Lumenis Trilift - Rejuvenation package /5 sessions',
           description:
-            'Soften expression lines, smooth fine wrinkles, and refresh your look with precise neuromodulator treatments tailored to your features.',
-          benefits: [
-            'Targets frown lines, crow\'s feet, forehead lines',
-            'Minimal downtime, natural finish',
-            'Personalized dosing for balanced results',
-          ],
+            'TriPollar radiofrequency, and RF microneedling to tone facial muscles, lift skin, and enhance texture. Designed for facial rejuvenation, it tackles aging by targeting muscle structure, dermal collagen, and the epidermal layer. Results: Provides a "non-surgical facelift" effect, with reported 30% reduction in wrinkles, 80% increase in smoothness, and tripled Hyaluronic Acid production.Effective for sagging skin and loss of volume, focuses on cheeks, jowls, and under-eye areas to restore youthful, toned muscle structure.',
         },
         {
-          name: 'Dermal Fillers',
-          description:
-            'Restore volume, refine contours, and enhance definition with hyaluronic-acid fillers customized for your unique profile.',
-          benefits: [
-            'Lips, cheeks, chin, jawline balancing',
-            'Hydrating HA formulas for a soft feel',
-            'Immediate results with subtle shaping',
-          ],
+          name: 'Lumenis Trilift one session',
+          description: 'It addresses the three elements of aging simultaneously: skin texture, structure, and contour, by treating the epidermal layer, dermal layer, and muscles. The procedure is designed to provide a facelift-like effect without the need for surgery or injections, with minimal downtime.'
         },
         {
-          name: 'Skin Rejuvenation',
+          name: 'Neurotoxin Injections/Botox 3 areas (forehead, glabella and crows feet)',
           description:
-            'Boost luminosity and even tone with resurfacing and collagen-stimulating treatments designed to revive your complexion.',
-          benefits: [
-            'Supports smoother texture and smaller pores',
-            'Targets sun damage and uneven tone',
-            'Plans tailored to skin type and goals',
-          ],
+            'Neurotoxin injections, such as Botox, are designed to block nerve signals that initiate muscle contractions, promoting muscle relaxation. This treatment effectively reduces the visibility of fine lines and wrinkles, providing a smoother, more youthful appearance. Patients often seek these injections to enhance their overall facial aesthetics and boost self-confidence.',
         },
         {
-          name: 'IV Therapy',
+          name: 'Neurotoxin injections/Baby Botox',
           description:
-            'Hydrate, replenish nutrients, and support energy with custom IV drips delivered in a calm, comfortable setting.',
-          benefits: [
-            'Supports recovery and immune health',
-            'Custom blends based on your needs',
-            'Relaxing, efficient sessions',
-          ],
+            'Neurotoxin injections, commonly referred to as Baby Botox, are a prescription treatment designed to temporarily relax specific facial muscles, effectively reducing the appearance of moderate to severe crow\'s feet. This innovative approach is suitable for adults aged 18 to 65 and can enhance facial aesthetics by providing a smoother, more youthful appearance. The effects typically last for a limited duration, making it an ideal option for those seeking subtle yet noticeable improvements in their facial features.',
         },
+        {
+          name: 'B12 Injection',
+          description:
+            'Revitalize your body and mind with our B12 Injection Service, designed to deliver a concentrated dose of vitamin B12 directly into your system. This essential vitamin is renowned for its ability to enhance energy levels, improve mood, and support cognitive function, making it an ideal choice for individuals seeking greater vitality and mental clarity. Experience a noticeable boost in your overall well-being as you incorporate this quick and effective service into your wellness routine.',
+        },
+        {
+          name: 'Botox - 2 areas',
+          description: 'Cosmetic is a prescription medicine that is injected into muscles and used to improve the look of moderate to severe frown lines between the eyebrows (glabellar lines) in people 18 to 65 years of age for a short period of time.'
+        },
+        {
+          name: 'Lip Fillers -Half Syringe (0.5 ML)',
+          description: 'Lip fillers are a prescription treatment designed to enhance the appearance of the lips by smoothing out moderate to severe lines around the mouth. This injectable solution is suitable for adults aged 18 to 65 and can provide a temporary yet noticeable improvement in lip volume and contour. Experience a rejuvenated smile with results that can last for several months, helping you feel more confident in your appearance.\nLip augmentation works by restoring your lips\' natural hyaluronic acid reserves. The dermal fillers used for lip augmentation, such as Restylane Kysse, are made of a subtle hyaluronic acid formulation. When injected carefully, they make the lips look more voluminous, smooth, and supple while maintaining a complete range of expressions. Lip augmentation also smoothens the perioral lines (lipstick lines) around the mouth.'
+        },
+        {
+          name: 'Lip Filler',
+          description: 'Our skilled professionals use high-quality fillers to enhance lip volume and definition, creating a subtle and beautiful result. Whether you desire a fuller appearance or wish to restore lost volume, our lip filler service is tailored to meet your unique preferences. Lip augmentation works by restoring your lips\' natural hyaluronic acid reserves. The dermal fillers used for lip augmentation, such as Restylane Kysse, are made of a subtle hyaluronic acid formulation. When injected carefully, they make the lips look more voluminous, smooth, and supple while maintaining a complete range of expressions. Lip augmentation also smoothens the perioral lines (lipstick lines) around the mouth.'
+        },
+        {
+          name: 'Face Filler',
+          description: 'Our skilled professionals use premium dermal fillers to target fine lines, wrinkles, and areas of lost volume, providing a subtle and natural-looking result. Whether you seek to plump lips, soften facial creases, or contour specific features, our Face Filler Service offers personalized treatments tailored to your unique needs'
+        },
+        {
+          name: 'Gluthation Injection',
+          description: 'Our Glutathione Vitamin Injection Service delivers a powerful boost of this master antioxidant directly into your system, ensuring maximum absorption and effectiveness. By replenishing and optimizing your glutathione levels, you can experience a range of benefits, including improved skin tone, enhanced immune function, and increased energy levels.'
+        },
+        {
+          name: 'Neurotoxin Injections/Botox - 1 area',
+          description: 'Neurotoxin injections, such as Botox, target specific facial muscles to reduce the appearance of fine lines and wrinkles in one area. This non-invasive treatment offers a refreshed, youthful look with minimal downtime and quick results.'
+        },
+        {
+          name: 'B12 Shot',
+          description: 'One of the best ways to recover your lost energy is to get Vitamin B12 injections.'
+        },
+        {
+          name: 'Tirzepatide 1st Month',
+          description: 'Tirzepatide 1st Month offers an effective weight management solution through a novel injectable medication designed to improve glycemic control and support metabolic health. This treatment aims to help individuals achieve their weight loss goals while enhancing overall well-being.'
+        },
+        {
+          name: 'Tirzepatide - 1st month/ Single injection',
+          description: 'Tirzepatide is a groundbreaking medication designed for weight management and type 2 diabetes treatment, administered through a single injection. This first-month supply offers an effective starting point for patients seeking to improve their health outcomes.'
+        },
+        {
+          name: 'Tirzepatide Second month',
+          description: 'Tirzepatide Second Month is designed to support ongoing weight management and metabolic health as part of a comprehensive treatment plan. This medication helps enhance the body\'s ability to regulate blood sugar levels and may contribute to significant weight loss results over time.'
+        },
+        {
+          name: 'Tirzepatide -Second month/ Single injection',
+          description: 'Tirzepatide is a once-monthly injectable medication designed to enhance metabolic control and aid in weight management. This second-month single injection offers continued support for those seeking to improve their overall health and wellness.'
+        },
+        {
+          name: 'Tirzepatide- Third Month',
+          description: 'Tirzepatide- Third Month is a comprehensive treatment program designed to optimize weight management and improve metabolic health over a three-month period. This service includes personalized coaching and ongoing support to help clients achieve their wellness goals effectively.'
+        },
+        {
+          name: 'Tirzepatide Third month/ Single injection',
+          description: 'Tirzepatide is a single injection treatment that effectively aids in weight management and metabolic health. Administered in the third month of therapy, it helps enhance glycemic control and promote sustainable weight loss.'
+        },
+        {
+          name: 'Night Owl',
+          description: 'Electrolyte hydration combined with B12, B-Complex, Taurine and Carnitine, with an addition of Vitamin C and Magnesium make this our go-to IV drip when you\’re preparing for a long day ahead, whether it be for business, travel or fun. Help your body stay hydrated while boosting B Vitamins and keeping your head in the game with Taurine and Carnitine.\nKEY INGREDIENTS: Electrolyte Fluids, B-Complex, B12, Taurine, L-Carnitine\nPLUS: Vitamin C, Magnesium, B5, B6, Trace Minerals'
+        },
+        {
+          name: 'Beauty Glow',
+          description: 'Biotin (Vitamin B7), L-Carnitine, glutathione, vitamin C, B-complex vitamins, and vitamin B12 can all be used to support healthy, radiant skin. IV fluids can hydrate the body and promote healthy skin function, whereas glutathione is a powerful antioxidant that can protect the skin from oxidative stress. Vitamin C is a necessary nutrient that aids in collagen production and protects the skin from environmental damage. B-complex vitamins are necessary for the production of red blood cells, which can help to oxygenate and nourish the skin. Vitamin B12 is required for the production of red blood cells, which can help oxygenate and nourish the skin. When administered via IV therapy, these nutrients work together to support healthy, glowing skin'
+        },
+        {
+          name: 'Hangover Rescue',
+          description: 'The Hangover Rescue can help with symptoms like intense headaches, dehydration, fatigue, nausea, dizziness, vomiting, and more. We may be the closest thing to healing a hangover.'
+        },
+        {
+          name: 'NAD',
+          description: 'NAD+ IV therapy provides vast support and benefits for improved health, inflammation, anti-aging, and more. NAD+ is a critical molecule found in every cell of the body and is essential for cellular energy generation. We offer doses of NAD+ at 100mg, 250mg, 500mg, 750mfg, and 1,000mg that can be personalized. As an electron carrier, NAD+ helps produce ATP, the primary energy source for cells. It also facilitates the conversion of nutrients into energy through metabolic pathways such as glycolysis, the citric acid cycle, and oxidative phosphorylation'
+        },
+        {
+          name: 'Pick me up -Energy Boost IV',
+          description: 'Energize instantly with our premier IV drip, crafted for those seeking a significant, swift uplift in vitality, perfect for quickly dispelling fatigue and enhancing energy levels. Our Energy Boost IV is supercharged with L-Carnitine, Vitamin B12, B complex Vitamins, Taurine, and Vitamin C, is designed for optimal energy production. '
+        },
+        {
+          name: 'Myer\'s cocktail',
+          description: 'Myer\'s Cocktail IV infusion is designed to support your immune system, replenish essential nutrients, and rejuvenate your body. This therapeutic treatment addresses various health conditions while promoting overall wellness and vitality.\nMyers\' Cocktail IV infusion is a combination of magnesium, zinc, calcium, B-Vitamins (including B12), Vitamin C, and IV fluids that are administered intravenously. It was first introduced by Dr. John Myers, a physician from Baltimore, Maryland, in the 1970s'
+        },
+        {
+          name: 'IV - Me Cocktail',
+          description: 'IV - Me Cocktail offers personalized vitamin infusions delivered directly into your bloodstream via an IV drip, allowing for immediate absorption and targeted health benefits. Our expert team is ready to assist you in selecting the right blend of vitamins and nutrients to optimize your wellness, ensuring you maintain a balanced nutritional state for peak performance.'
+        }
       ],
     },
 
@@ -217,14 +281,14 @@ const translations = {
       appointment: '',
       featuredServices: [
         {
-          name: 'Botox',
+          name: 'Lumenis Trilift - Paquete de rejuvenecimiento /5 sesiones',
           description:
-            'Suaviza líneas finas y líneas de expresión con tratamientos precisos y dirigidos para una apariencia renovada.',
+            'Radiofrecuencia TriPollar y microagujas de RF para tonificar los músculos faciales, levantar la piel y mejorar la textura. Diseñado para el rejuvenecimiento facial, aborda el envejecimiento atacando la estructura muscular, el colágeno dérmico y la capa epidérmica. Resultados: Proporciona un efecto de "lifting facial no quirúrgico", con una reducción reportada del 30% en arrugas, 80% de aumento en suavidad y producción triplicada de ácido hialurónico. Eficaz para la flacidez de la piel y pérdida de volumen, se enfoca en mejillas, papada y área debajo de los ojos para restaurar una estructura muscular juvenil y tonificada.',
         },
         {
-          name: 'Rejuvenecimiento de piel',
+          name: 'Inyecciones de neurotoxina/Botox 3 áreas (frente, glabela y patas de gallo)',
           description:
-            'Unifica el tono y aumenta la luminosidad con tratamientos avanzados de resurgimiento y estimulación de colágeno.',
+            'Las inyecciones de neurotoxina, como el Botox, están diseñadas para bloquear las señales nerviosas que inician las contracciones musculares, promoviendo la relajación muscular. Este tratamiento reduce eficazmente la visibilidad de líneas finas y arrugas, proporcionando una apariencia más suave y juvenil. Los pacientes a menudo buscan estas inyecciones para mejorar su estética facial general y aumentar la confianza en sí mismos.',
         },
       ],
     },
@@ -238,45 +302,109 @@ const translations = {
       appointment: '',
       items: [
         {
-          name: 'Botox',
+          name: 'Lumenis Trilift - Paquete de rejuvenecimiento /5 sesiones',
           description:
-            'Suaviza líneas de expresión, alisa arrugas finas y renueva tu apariencia con tratamientos neuromoduladores precisos adaptados a tus rasgos.',
-          benefits: [
-            'Actúa sobre líneas del entrecejo, patas de gallo y frente',
-            'Tiempo de recuperación mínimo, acabado natural',
-            'Dosificación personalizada para resultados equilibrados',
-          ],
+            'Radiofrecuencia TriPollar y microagujas de RF para tonificar los músculos faciales, levantar la piel y mejorar la textura. Diseñado para el rejuvenecimiento facial, aborda el envejecimiento atacando la estructura muscular, el colágeno dérmico y la capa epidérmica. Resultados: Proporciona un efecto de "lifting facial no quirúrgico", con una reducción reportada del 30% en arrugas, 80% de aumento en suavidad y producción triplicada de ácido hialurónico. Eficaz para la flacidez de la piel y pérdida de volumen, se enfoca en mejillas, papada y área debajo de los ojos para restaurar una estructura muscular juvenil y tonificada.',
         },
         {
-          name: 'Rellenos dérmicos',
-          description:
-            'Restaura volumen, refina contornos y mejora la definición con rellenos de ácido hialurónico personalizados para tu perfil único.',
-          benefits: [
-            'Equilibrio de labios, mejillas, mentón y mandíbula',
-            'Fórmulas de AH hidratantes para una sensación suave',
-            'Resultados inmediatos con modelado sutil',
-          ],
+          name: 'Lumenis Trilift una sesión',
+          description: 'Aborda los tres elementos del envejecimiento simultáneamente: textura de la piel, estructura y contorno, tratando la capa epidérmica, la capa dérmica y los músculos. El procedimiento está diseñado para proporcionar un efecto similar al lifting facial sin necesidad de cirugía o inyecciones, con tiempo de recuperación mínimo.'
         },
         {
-          name: 'Rejuvenecimiento de piel',
+          name: 'Inyecciones de neurotoxina/Botox 3 áreas (frente, glabela y patas de gallo)',
           description:
-            'Aumenta la luminosidad y unifica el tono con tratamientos de resurgimiento y estimulación de colágeno diseñados para revivir tu cutis.',
-          benefits: [
-            'Mejora la textura y reduce los poros',
-            'Actúa sobre daño solar y tono irregular',
-            'Planes adaptados al tipo de piel y objetivos',
-          ],
+            'Las inyecciones de neurotoxina, como el Botox, están diseñadas para bloquear las señales nerviosas que inician las contracciones musculares, promoviendo la relajación muscular. Este tratamiento reduce eficazmente la visibilidad de líneas finas y arrugas, proporcionando una apariencia más suave y juvenil. Los pacientes a menudo buscan estas inyecciones para mejorar su estética facial general y aumentar la confianza en sí mismos.',
         },
         {
-          name: 'Terapia IV',
+          name: 'Inyecciones de neurotoxina/Baby Botox',
           description:
-            'Hidrátate, repone nutrientes y apoya tu energía con sueros IV personalizados en un ambiente tranquilo y cómodo.',
-          benefits: [
-            'Apoya la recuperación y la salud inmunológica',
-            'Mezclas personalizadas según tus necesidades',
-            'Sesiones relajantes y eficientes',
-          ],
+            'Las inyecciones de neurotoxina, comúnmente conocidas como Baby Botox, son un tratamiento con receta diseñado para relajar temporalmente músculos faciales específicos, reduciendo eficazmente la apariencia de patas de gallo moderadas a severas. Este enfoque innovador es adecuado para adultos de 18 a 65 años y puede mejorar la estética facial proporcionando una apariencia más suave y juvenil. Los efectos generalmente duran por un tiempo limitado, lo que lo convierte en una opción ideal para aquellos que buscan mejoras sutiles pero notables en sus rasgos faciales.',
         },
+        {
+          name: 'Inyección de B12',
+          description:
+            'Revitaliza tu cuerpo y mente con nuestro Servicio de Inyección de B12, diseñado para entregar una dosis concentrada de vitamina B12 directamente en tu sistema. Esta vitamina esencial es reconocida por su capacidad para mejorar los niveles de energía, el estado de ánimo y apoyar la función cognitiva, lo que la convierte en una opción ideal para personas que buscan mayor vitalidad y claridad mental. Experimenta un impulso notable en tu bienestar general al incorporar este servicio rápido y efectivo en tu rutina de bienestar.',
+        },
+        {
+          name: 'Botox - 2 áreas',
+          description: 'Es un medicamento con receta que se inyecta en los músculos y se utiliza para mejorar la apariencia de líneas de expresión moderadas a severas entre las cejas (líneas glabelares) en personas de 18 a 65 años por un período corto de tiempo.'
+        },
+        {
+          name: 'Relleno de labios - Media jeringa (0.5 ML)',
+          description: 'Los rellenos de labios son un tratamiento con receta diseñado para mejorar la apariencia de los labios suavizando las líneas moderadas a severas alrededor de la boca. Esta solución inyectable es adecuada para adultos de 18 a 65 años y puede proporcionar una mejora temporal pero notable en el volumen y contorno de los labios. Experimenta una sonrisa rejuvenecida con resultados que pueden durar varios meses, ayudándote a sentirte más seguro/a con tu apariencia.\nEl aumento de labios funciona restaurando las reservas naturales de ácido hialurónico de tus labios. Los rellenos dérmicos utilizados para el aumento de labios, como Restylane Kysse, están hechos de una formulación sutil de ácido hialurónico. Cuando se inyectan cuidadosamente, hacen que los labios se vean más voluminosos, suaves y flexibles mientras mantienen una gama completa de expresiones. El aumento de labios también suaviza las líneas periorales (líneas de lápiz labial) alrededor de la boca.'
+        },
+        {
+          name: 'Relleno de labios',
+          description: 'Nuestros profesionales capacitados utilizan rellenos de alta calidad para mejorar el volumen y la definición de los labios, creando un resultado sutil y hermoso. Ya sea que desees una apariencia más llena o quieras restaurar el volumen perdido, nuestro servicio de relleno de labios está adaptado a tus preferencias únicas. El aumento de labios funciona restaurando las reservas naturales de ácido hialurónico de tus labios. Los rellenos dérmicos utilizados para el aumento de labios, como Restylane Kysse, están hechos de una formulación sutil de ácido hialurónico. Cuando se inyectan cuidadosamente, hacen que los labios se vean más voluminosos, suaves y flexibles mientras mantienen una gama completa de expresiones. El aumento de labios también suaviza las líneas periorales (líneas de lápiz labial) alrededor de la boca.'
+        },
+        {
+          name: 'Relleno facial',
+          description: 'Nuestros profesionales capacitados utilizan rellenos dérmicos premium para tratar líneas finas, arrugas y áreas de pérdida de volumen, proporcionando un resultado sutil y de apariencia natural. Ya sea que busques rellenar labios, suavizar pliegues faciales o contornear características específicas, nuestro Servicio de Relleno Facial ofrece tratamientos personalizados adaptados a tus necesidades únicas.'
+        },
+        {
+          name: 'Inyección de glutatión',
+          description: 'Nuestro Servicio de Inyección de Vitamina Glutatión entrega un poderoso impulso de este antioxidante maestro directamente en tu sistema, asegurando máxima absorción y efectividad. Al reponer y optimizar tus niveles de glutatión, puedes experimentar una variedad de beneficios, incluyendo mejor tono de piel, función inmune mejorada y mayores niveles de energía.'
+        },
+        {
+          name: 'Inyecciones de neurotoxina/Botox - 1 área',
+          description: 'Las inyecciones de neurotoxina, como el Botox, se dirigen a músculos faciales específicos para reducir la apariencia de líneas finas y arrugas en una área. Este tratamiento no invasivo ofrece una apariencia renovada y juvenil con tiempo de recuperación mínimo y resultados rápidos.'
+        },
+        {
+          name: 'Inyección de B12',
+          description: 'Una de las mejores formas de recuperar tu energía perdida es recibir inyecciones de Vitamina B12.'
+        },
+        {
+          name: 'Tirzepatida 1er mes',
+          description: 'Tirzepatida 1er mes ofrece una solución efectiva para el manejo del peso a través de un novedoso medicamento inyectable diseñado para mejorar el control glucémico y apoyar la salud metabólica. Este tratamiento tiene como objetivo ayudar a las personas a alcanzar sus metas de pérdida de peso mientras mejora el bienestar general.'
+        },
+        {
+          name: 'Tirzepatida - 1er mes/ Inyección única',
+          description: 'Tirzepatida es un medicamento innovador diseñado para el manejo del peso y el tratamiento de la diabetes tipo 2, administrado a través de una sola inyección. Este suministro del primer mes ofrece un punto de partida efectivo para pacientes que buscan mejorar sus resultados de salud.'
+        },
+        {
+          name: 'Tirzepatida segundo mes',
+          description: 'Tirzepatida segundo mes está diseñado para apoyar el manejo continuo del peso y la salud metabólica como parte de un plan de tratamiento integral. Este medicamento ayuda a mejorar la capacidad del cuerpo para regular los niveles de azúcar en sangre y puede contribuir a resultados significativos de pérdida de peso con el tiempo.'
+        },
+        {
+          name: 'Tirzepatida - Segundo mes/ Inyección única',
+          description: 'Tirzepatida es un medicamento inyectable mensual diseñado para mejorar el control metabólico y ayudar en el manejo del peso. Esta inyección única del segundo mes ofrece apoyo continuo para aquellos que buscan mejorar su salud y bienestar general.'
+        },
+        {
+          name: 'Tirzepatida - Tercer mes',
+          description: 'Tirzepatida - Tercer mes es un programa de tratamiento integral diseñado para optimizar el manejo del peso y mejorar la salud metabólica durante un período de tres meses. Este servicio incluye coaching personalizado y apoyo continuo para ayudar a los clientes a alcanzar sus metas de bienestar de manera efectiva.'
+        },
+        {
+          name: 'Tirzepatida tercer mes/ Inyección única',
+          description: 'Tirzepatida es un tratamiento de inyección única que ayuda eficazmente en el manejo del peso y la salud metabólica. Administrado en el tercer mes de terapia, ayuda a mejorar el control glucémico y promover la pérdida de peso sostenible.'
+        },
+        {
+          name: 'Búho nocturno',
+          description: 'Hidratación con electrolitos combinada con B12, complejo B, taurina y carnitina, con adición de vitamina C y magnesio hacen de este nuestro suero IV preferido cuando te preparas para un largo día, ya sea por negocios, viajes o diversión. Ayuda a tu cuerpo a mantenerse hidratado mientras aumentas las vitaminas B y mantienes tu mente enfocada con taurina y carnitina.\nINGREDIENTES CLAVE: Fluidos con electrolitos, complejo B, B12, taurina, L-carnitina\nMÁS: Vitamina C, magnesio, B5, B6, minerales traza'
+        },
+        {
+          name: 'Brillo de belleza',
+          description: 'Biotina (Vitamina B7), L-carnitina, glutatión, vitamina C, vitaminas del complejo B y vitamina B12 pueden usarse para apoyar una piel saludable y radiante. Los fluidos IV pueden hidratar el cuerpo y promover una función saludable de la piel, mientras que el glutatión es un poderoso antioxidante que puede proteger la piel del estrés oxidativo. La vitamina C es un nutriente necesario que ayuda en la producción de colágeno y protege la piel del daño ambiental. Las vitaminas del complejo B son necesarias para la producción de glóbulos rojos, que pueden ayudar a oxigenar y nutrir la piel. La vitamina B12 es necesaria para la producción de glóbulos rojos, que pueden ayudar a oxigenar y nutrir la piel. Cuando se administran mediante terapia IV, estos nutrientes trabajan juntos para apoyar una piel saludable y brillante.'
+        },
+        {
+          name: 'Rescate de resaca',
+          description: 'El Rescate de resaca puede ayudar con síntomas como dolores de cabeza intensos, deshidratación, fatiga, náuseas, mareos, vómitos y más. Puede que seamos lo más cercano a curar una resaca.'
+        },
+        {
+          name: 'NAD',
+          description: 'La terapia IV de NAD+ proporciona amplio apoyo y beneficios para mejorar la salud, la inflamación, el antienvejecimiento y más. NAD+ es una molécula crítica que se encuentra en cada célula del cuerpo y es esencial para la generación de energía celular. Ofrecemos dosis de NAD+ de 100mg, 250mg, 500mg, 750mg y 1,000mg que pueden personalizarse. Como transportador de electrones, NAD+ ayuda a producir ATP, la fuente principal de energía para las células. También facilita la conversión de nutrientes en energía a través de vías metabólicas como la glucólisis, el ciclo del ácido cítrico y la fosforilación oxidativa.'
+        },
+        {
+          name: 'Revitalizante - IV de impulso energético',
+          description: 'Energízate instantáneamente con nuestro suero IV premier, creado para aquellos que buscan un aumento significativo y rápido de vitalidad, perfecto para disipar rápidamente la fatiga y mejorar los niveles de energía. Nuestro IV de impulso energético está supercargado con L-carnitina, vitamina B12, vitaminas del complejo B, taurina y vitamina C, diseñado para una producción óptima de energía.'
+        },
+        {
+          name: 'Cóctel de Myer',
+          description: 'La infusión IV del Cóctel de Myer está diseñada para apoyar tu sistema inmunológico, reponer nutrientes esenciales y rejuvenecer tu cuerpo. Este tratamiento terapéutico aborda diversas condiciones de salud mientras promueve el bienestar general y la vitalidad.\nLa infusión IV del Cóctel de Myers es una combinación de magnesio, zinc, calcio, vitaminas B (incluyendo B12), vitamina C y fluidos IV que se administran por vía intravenosa. Fue introducido por primera vez por el Dr. John Myers, un médico de Baltimore, Maryland, en la década de 1970.'
+        },
+        {
+          name: 'IV - Cóctel personalizado',
+          description: 'El Cóctel IV personalizado ofrece infusiones de vitaminas personalizadas entregadas directamente en tu torrente sanguíneo a través de un suero IV, permitiendo una absorción inmediata y beneficios de salud específicos. Nuestro equipo de expertos está listo para ayudarte a seleccionar la mezcla correcta de vitaminas y nutrientes para optimizar tu bienestar, asegurando que mantengas un estado nutricional equilibrado para un rendimiento óptimo.'
+        }
       ],
     },
 
