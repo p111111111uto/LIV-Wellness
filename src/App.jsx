@@ -5,7 +5,6 @@ import Footer from './Footer.jsx';
 import Services from './Services.jsx';
 import AboutUs from './AboutUs.jsx';
 import Contact from './Contact.jsx';
-import Bookings from './Bookings.jsx';
 import CookieConsent from './CookieConsent.jsx';
 import PrivacyNotice from './PrivacyNotice.jsx';
 import AccessibilityWidget from './AccessibilityWidget.jsx';
@@ -57,9 +56,9 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/bookings" element={<Services />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/bookings" element={<Bookings />} />
           <Route path="/privacy" element={<PrivacyNotice />} />
           <Route path="*" element={<Home />} />
         </Routes>

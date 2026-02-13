@@ -138,7 +138,7 @@ function Home() {
           <Button
             variant="outlined"
             component={RouterLink}
-            to="/bookings"
+            to="/services"
             sx={outlinedButtonSx}
           >
             {t.home.bookOnline}
@@ -195,7 +195,7 @@ function Home() {
                 <Button
                   variant="outlined"
                   component={RouterLink}
-                  to="/bookings"
+                  to="/services"
                   sx={{ ...outlinedButtonSx, alignSelf: 'flex-start', mt: 'auto' }}
                 >
                   {t.home.bookYour} {service.name} {t.home.appointment}

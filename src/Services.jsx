@@ -1,33 +1,27 @@
+import { useEffect, useRef } from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
-import { Link as RouterLink } from 'react-router-dom';
-import { servicesImageBase } from './data/servicesImageBase.js';
 import { useLanguage } from './LanguageContext';
-
-const outlinedButtonSx = {
-  px: 4.5,
-  py: 1.4,
-  borderRadius: 0,
-  textTransform: 'uppercase',
-  letterSpacing: '0.08em',
-  fontWeight: 600,
-  borderColor: '#8a6a3f',
-  color: '#8a6a3f',
-  '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
-};
 
 function Services() {
   const { t } = useLanguage();
+  const vagaroRef = useRef(null);
 
-  const services = t.services.items.map((item, i) => ({
-    ...item,
-    image: servicesImageBase[i].src,
-  }));
+  useEffect(() => {
+    if (!vagaroRef.current) return;
+
+    const script = document.createElement('script');
+    script.src = 'https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqqCJWmCpacT3qmV35y79oz34mC2PeFJ4mC30m9dSycvCu7gevEhAJDXwOapcUbfY?v=zoRKOW3HAO8g7BcnUjsbmLyf0rGaoyFB9ragSStFK0y0#';
+    script.type = 'text/javascript';
+    vagaroRef.current.appendChild(script);
+
+    return () => {
+      if (vagaroRef.current && script.parentNode === vagaroRef.current) {
+        vagaroRef.current.removeChild(script);
+      }
+    };
+  }, []);
 
   return (
     <Box component="main" sx={{ backgroundColor: 'background.default' }}>
@@ -52,60 +46,36 @@ function Services() {
       </Box>
 
       <Container maxWidth="lg" sx={{ pb: { xs: 6, md: 8 } }}>
-        <Box
-          sx={{
-            display: 'grid',
-            gridTemplateColumns: { xs: '1fr', md: 'repeat(2, 1fr)' },
-            gap: { xs: 3, md: 4 },
+        <div
+          id="frameTitle"
+          className="embedded-widget-title"
+          style={{
+            fontSize: '23px',
+            color: '#333',
+            fontFamily: 'Arial, Helvetica, sans-serif',
+            lineHeight: '24px',
+            padding: '18px 10px 8px',
+            textAlign: 'center',
+            boxSizing: 'border-box',
+          }}
+        />
+        <div
+          ref={vagaroRef}
+          className="vagaro"
+          style={{
+            width: '250px',
+            padding: 0,
+            border: 0,
+            margin: '0 auto',
+            textAlign: 'center',
           }}
         >
-          {services.map((service) => (
-            <Card
-              key={service.name}
-              sx={{
-                height: '100%',
-                display: 'flex',
-                flexDirection: 'column',
-                borderRadius: 3,
-                overflow: 'hidden',
-                boxShadow: 3,
-              }}
-            >
-              <CardMedia
-                component="div"
-                sx={{
-                  height: 220,
-                  backgroundImage: `url(${service.image})`,
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center',
-                }}
-              />
-              <CardContent sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 1.25 }}>
-                <Typography variant="h5" component="h2" sx={{ fontFamily: '"Rosehot", "Montserrat", Arial, sans-serif' }}>
-                  {service.name}
-                </Typography>
-                <Typography variant="body1" color="text.primary">
-                  {service.description}
-                </Typography>
-                <Box component="ul" sx={{ pl: 3, m: 0, color: 'text.secondary', flexGrow: 1 }}>
-                  {service.benefits.map((benefit) => (
-                    <Typography key={benefit} component="li" variant="body2" sx={{ mb: 0.5 }}>
-                      {benefit}
-                    </Typography>
-                  ))}
-                </Box>
-                <Button
-                  variant="outlined"
-                  component={RouterLink}
-                  to="/bookings"
-                  sx={{ ...outlinedButtonSx, alignSelf: 'flex-start', mt: 'auto' }}
-                >
-                  {t.services.bookYour} {service.name} {t.services.appointment}
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </Box>
+          <style>{`.vagaro a { font-size: 14px; color: #AAA; text-decoration: none; }`}</style>
+          <a href="https://www.vagaro.com/pro/">Powered by Vagaro</a>&nbsp;
+          <a href="https://www.vagaro.com/pro/salon-software">Salon Software</a>,&nbsp;
+          <a href="https://www.vagaro.com/pro/spa-software">Spa Software</a>&nbsp;&amp;&nbsp;
+          <a href="https://www.vagaro.com/pro/fitness-software">Fitness Software</a>
+        </div>
       </Container>
     </Box>
   );

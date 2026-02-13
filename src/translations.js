@@ -2,8 +2,7 @@ const translations = {
   en: {
     // Nav
     nav: {
-      services: 'Services',
-      bookings: 'Bookings',
+      services: 'Services/Booking',
       contact: 'Contact',
       aboutUs: 'About Us',
     },
@@ -214,14 +213,6 @@ const translations = {
       email: 'Email',
     },
 
-    // Bookings
-    bookings: {
-      pageTitle: 'Book Your Visit',
-      pageBody:
-        'We\'re excited to craft a personalized experience for you. Choose a service to start, or contact our team if you need guidance on the best treatment plan.',
-      contactTeam: 'Contact Our Team',
-    },
-
     // Footer
     footer: {
       contact: 'CONTACT',
@@ -257,8 +248,7 @@ const translations = {
   es: {
     // Nav
     nav: {
-      services: 'Servicios',
-      bookings: 'Reservas',
+      services: 'Servicios/Reservas',
       contact: 'Contacto',
       aboutUs: 'Sobre Nosotros',
     },
@@ -467,14 +457,6 @@ const translations = {
       callOrEmail: 'Llame o escriba',
       phone: 'Teléfono',
       email: 'Correo',
-    },
-
-    // Bookings
-    bookings: {
-      pageTitle: 'Reserve su visita',
-      pageBody:
-        'Estamos emocionados de crear una experiencia personalizada para usted. Elija un servicio para comenzar, o contacte a nuestro equipo si necesita orientación sobre el mejor plan de tratamiento.',
-      contactTeam: 'Contactar a nuestro equipo',
     },
 
     // Footer
