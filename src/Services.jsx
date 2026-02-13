@@ -14,13 +14,8 @@ function Services() {
     const script = document.createElement('script');
     script.src = 'https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqqCJWmCpacT3qmV35y79oz34mC2PeFJ4mC30m9dSycvCu7gevEhAJDXwOapcUbfY?v=zoRKOW3HAO8g7BcnUjsbmLyf0rGaoyFB9ragSStFK0y0#';
     script.type = 'text/javascript';
+    script.async = true;
     vagaroRef.current.appendChild(script);
-
-    return () => {
-      if (vagaroRef.current && script.parentNode === vagaroRef.current) {
-        vagaroRef.current.removeChild(script);
-      }
-    };
   }, []);
 
   return (
@@ -63,7 +58,8 @@ function Services() {
           ref={vagaroRef}
           className="vagaro"
           style={{
-            width: '250px',
+            width: '100%',
+            maxWidth: '600px',
             padding: 0,
             border: 0,
             margin: '0 auto',
