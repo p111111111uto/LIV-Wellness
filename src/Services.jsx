@@ -14,7 +14,6 @@ function Services() {
     const script = document.createElement('script');
     script.src = 'https://www.vagaro.com//resources/WidgetEmbeddedLoader/OZqqCJWmCpacT3qmV35y79oz34mC2PeFJ4mC30m9dSycvCu7gevEhAJDXwOapcUbfY?v=zoRKOW3HAO8g7BcnUjsbmLyf0rGaoyFB9ragSStFK0y0#';
     script.type = 'text/javascript';
-    script.async = true;
     vagaroRef.current.appendChild(script);
   }, []);
 
