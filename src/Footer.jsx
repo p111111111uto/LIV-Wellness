@@ -40,8 +40,8 @@ function Footer() {
             </Typography>
             <Typography variant="body1" sx={{ mb: 1 }}>
               {t.footer.phone}:{' '}
-              <Link href="tel:5551234567" underline="none" sx={{ color: 'inherit' }}>
-                (555) 123-4567
+              <Link href="tel:7866155954" underline="none" sx={{ color: 'inherit' }}>
+                (786) 615-5954
               </Link>
             </Typography>
             <Typography variant="body1" sx={{ mb: 1 }}>
