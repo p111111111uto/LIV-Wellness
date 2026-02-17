@@ -8,7 +8,7 @@ import Link from '@mui/material/Link';
 import { useLanguage } from './LanguageContext';
 
 const address = '8040 NW 95th Street Suite 224 Hialeah Gardens, FL 33016';
-const phone = '(555) 123-4567';
+const phone = '(786) 615-5954';
 const email = 'hello@livwellness.com';
 const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 
@@ -72,7 +72,7 @@ function Contact() {
                 </Typography>
                 <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
                   {t.contact.phone}:{' '}
-                  <Link href="tel:5551234567" underline="none" sx={{ color: 'inherit' }}>
+                  <Link href="tel:7866155954" underline="none" sx={{ color: 'inherit' }}>
                     {phone}
                   </Link>
                   <br />
