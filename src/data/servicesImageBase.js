@@ -11,4 +11,7 @@ export const servicesImageBase = [
   {
     src: new URL('../assets/iv-therapy.jpg', import.meta.url).href,
   },
+  {
+    src: new URL('../assets/trilift.png', import.meta.url).href,
+  },
 ];

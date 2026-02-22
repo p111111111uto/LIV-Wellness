@@ -25,7 +25,7 @@ const outlinedButtonSx = {
   '&:hover': { borderColor: '#8a6a3f', backgroundColor: 'rgba(138,106,63,0.08)' },
 };
 
-const serviceImages = [servicesImageBase[0].src, servicesImageBase[2].src];
+const serviceImages = [servicesImageBase[4].src, servicesImageBase[0].src];
 
 function Home() {
   const { t } = useLanguage();
