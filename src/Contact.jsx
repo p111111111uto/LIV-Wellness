@@ -59,11 +59,19 @@ function Contact() {
                 <Typography variant="h6" sx={{ fontWeight: 700, mb: 1 }}>
                   {t.contact.hours}
                 </Typography>
-                <Typography variant="body1" sx={{ lineHeight: 1.7 }}>
-                  {t.contact.hoursValue[0]}
-                  <br />
-                  {t.contact.hoursValue[1]}
-                </Typography>
+                {t.contact.hoursValue.map((item) => (
+                  <Box
+                    key={item.day}
+                    sx={{ display: 'flex', justifyContent: 'space-between', gap: 2 }}
+                  >
+                    <Typography variant="body1" sx={{ fontWeight: item.bold ? 700 : 400 }}>
+                      {item.day}
+                    </Typography>
+                    <Typography variant="body1" sx={{ fontWeight: item.bold ? 700 : 400 }}>
+                      {item.hours}
+                    </Typography>
+                  </Box>
+                ))}
               </Box>
 
               <Box>
